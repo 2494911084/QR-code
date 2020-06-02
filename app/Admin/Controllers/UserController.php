@@ -21,16 +21,21 @@ class UserController extends AdminController
             $grid->id->sortable();
             $grid->name;
             $grid->r_name;
-            $grid->avatar;
+            $grid->avatar()->image();
             $grid->weixin_openid;
             $grid->weixin_session_key;
             $grid->phone;
             $grid->created_at;
             $grid->updated_at->sortable();
-        
+
+            // 禁用创建按钮
+            $grid->disableCreateButton();
+            // 显示创建按钮
+            // $grid->showCreateButton();
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -68,11 +73,11 @@ class UserController extends AdminController
             $form->display('id');
             $form->text('name');
             $form->text('r_name');
-            $form->text('avatar');
+            $form->image('avatar');
             $form->text('weixin_openid');
             $form->text('weixin_session_key');
             $form->text('phone');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });

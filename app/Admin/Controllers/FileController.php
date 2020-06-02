@@ -20,14 +20,17 @@ class FileController extends AdminController
         return Grid::make(new File(), function (Grid $grid) {
             $grid->id->sortable();
             $grid->file_name;
-            $grid->file;
+            // $grid->file;
             $grid->view_count;
             $grid->created_at;
             $grid->updated_at->sortable();
-        
+
+            // 取消详情按钮
+            $grid->disableViewButton();
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -61,9 +64,9 @@ class FileController extends AdminController
         return Form::make(new File(), function (Form $form) {
             $form->display('id');
             $form->text('file_name');
-            $form->text('file');
-            $form->text('view_count');
-        
+            $form->file('file');
+            // $form->text('view_count');
+
             $form->display('created_at');
             $form->display('updated_at');
         });

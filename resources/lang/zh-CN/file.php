@@ -1,7 +1,7 @@
-<?php 
+<?php
 return [
     'labels' => [
-        'File' => 'File',
+        'File' => '交底文件',
     ],
     'fields' => [
         'file_name' => '名称',

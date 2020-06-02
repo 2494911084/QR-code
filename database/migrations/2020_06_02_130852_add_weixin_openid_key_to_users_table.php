@@ -20,6 +20,7 @@ class AddWeixinOpenidKeyToUsersTable extends Migration
             $table->string('weixin_openid')->unique()->after('avatar');
             $table->string('weixin_session_key')->after('weixin_openid');
             $table->string('email')->nullable()->change();
+            $table->string('password')->nullable()->change();
         });
     }
 
@@ -37,6 +38,7 @@ class AddWeixinOpenidKeyToUsersTable extends Migration
             $table->dropColumn('weixin_openid');
             $table->dropColumn('weixin_session_key');
             $table->string('email')->nullable('false')->change();
+            $table->string('password')->nullable('false')->change();
         });
     }
 }
