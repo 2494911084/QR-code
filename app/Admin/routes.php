@@ -14,4 +14,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
     $router->resource('users', 'UserController');
+    $router->resource('files', 'FileController');
+    $router->resource('file_view_logs', 'FileViewLogController');
+    $router->resource('qrs', 'QrController');
 });

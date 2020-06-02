@@ -37,11 +37,19 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection weixin_openid
      * @property Grid\Column|Collection weixin_session_key
      * @property Grid\Column|Collection phone
+     * @property Grid\Column|Collection file_name
+     * @property Grid\Column|Collection file
+     * @property Grid\Column|Collection view_count
+     * @property Grid\Column|Collection file_id
+     * @property Grid\Column|Collection user_id
+     * @property Grid\Column|Collection view_often
+     * @property Grid\Column|Collection view_time
+     * @property Grid\Column|Collection image
+     * @property Grid\Column|Collection content
      * @property Grid\Column|Collection parent_id
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection icon
      * @property Grid\Column|Collection uri
-     * @property Grid\Column|Collection user_id
      * @property Grid\Column|Collection permission_id
      * @property Grid\Column|Collection menu_id
      * @property Grid\Column|Collection http_method
@@ -84,11 +92,19 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection weixin_openid(string $label = null)
      * @method Grid\Column|Collection weixin_session_key(string $label = null)
      * @method Grid\Column|Collection phone(string $label = null)
+     * @method Grid\Column|Collection file_name(string $label = null)
+     * @method Grid\Column|Collection file(string $label = null)
+     * @method Grid\Column|Collection view_count(string $label = null)
+     * @method Grid\Column|Collection file_id(string $label = null)
+     * @method Grid\Column|Collection user_id(string $label = null)
+     * @method Grid\Column|Collection view_often(string $label = null)
+     * @method Grid\Column|Collection view_time(string $label = null)
+     * @method Grid\Column|Collection image(string $label = null)
+     * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection parent_id(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
      * @method Grid\Column|Collection uri(string $label = null)
-     * @method Grid\Column|Collection user_id(string $label = null)
      * @method Grid\Column|Collection permission_id(string $label = null)
      * @method Grid\Column|Collection menu_id(string $label = null)
      * @method Grid\Column|Collection http_method(string $label = null)
@@ -136,11 +152,19 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection weixin_openid
      * @property Show\Field|Collection weixin_session_key
      * @property Show\Field|Collection phone
+     * @property Show\Field|Collection file_name
+     * @property Show\Field|Collection file
+     * @property Show\Field|Collection view_count
+     * @property Show\Field|Collection file_id
+     * @property Show\Field|Collection user_id
+     * @property Show\Field|Collection view_often
+     * @property Show\Field|Collection view_time
+     * @property Show\Field|Collection image
+     * @property Show\Field|Collection content
      * @property Show\Field|Collection parent_id
      * @property Show\Field|Collection order
      * @property Show\Field|Collection icon
      * @property Show\Field|Collection uri
-     * @property Show\Field|Collection user_id
      * @property Show\Field|Collection permission_id
      * @property Show\Field|Collection menu_id
      * @property Show\Field|Collection http_method
@@ -183,11 +207,19 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection weixin_openid(string $label = null)
      * @method Show\Field|Collection weixin_session_key(string $label = null)
      * @method Show\Field|Collection phone(string $label = null)
+     * @method Show\Field|Collection file_name(string $label = null)
+     * @method Show\Field|Collection file(string $label = null)
+     * @method Show\Field|Collection view_count(string $label = null)
+     * @method Show\Field|Collection file_id(string $label = null)
+     * @method Show\Field|Collection user_id(string $label = null)
+     * @method Show\Field|Collection view_often(string $label = null)
+     * @method Show\Field|Collection view_time(string $label = null)
+     * @method Show\Field|Collection image(string $label = null)
+     * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection parent_id(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
      * @method Show\Field|Collection uri(string $label = null)
-     * @method Show\Field|Collection user_id(string $label = null)
      * @method Show\Field|Collection permission_id(string $label = null)
      * @method Show\Field|Collection menu_id(string $label = null)
      * @method Show\Field|Collection http_method(string $label = null)
