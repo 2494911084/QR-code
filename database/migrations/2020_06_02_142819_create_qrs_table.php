@@ -16,7 +16,7 @@ class CreateQrsTable extends Migration
         Schema::create('qrs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique()->index();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->text('content');
             $table->timestamps();
         });

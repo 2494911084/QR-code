@@ -25,10 +25,10 @@ class FileViewLogController extends AdminController
             $grid->view_time;
             $grid->created_at;
             $grid->updated_at->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -66,7 +66,7 @@ class FileViewLogController extends AdminController
             $form->text('user_id');
             $form->text('view_often');
             $form->text('view_time');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });
