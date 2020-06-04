@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::prefix('v1')->name('api.v1.')->group(function() {
-
+Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function() {
+    // 获取指定二维码的交底文件
+    Route::get('qrs/{qr}', 'QrsController@show')->name('qrs.show');
 });
