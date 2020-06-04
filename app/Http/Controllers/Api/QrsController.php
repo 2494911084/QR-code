@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Qr;
 use App\File;
 use App\Http\Resources\QrResource;
+use App\Handlers\ImageUploadHandler;
 
 class QrsController extends Controller
 {
@@ -22,5 +23,12 @@ class QrsController extends Controller
         }
         // $files_id_array = \Str::toArray($files_id);
         return $file_array;
+    }
+
+    public function qm_upload(Request $request, ImageUploadHandler $uploader)
+    {
+        $result = $uploader->save($request->image);
+
+        return $result['path'];
     }
 }

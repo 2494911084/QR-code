@@ -23,7 +23,7 @@ class QrController extends AdminController
             $grid->name;
 
             $grid->website->qrcode(function () {
-                return 'https://baidu.com';
+                return config('app_url') . '/weixin/qr_files?qr_id/' . $this->id ;
             }, 200, 200);
 
             $grid->created_at;

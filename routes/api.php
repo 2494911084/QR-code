@@ -16,4 +16,6 @@ use Illuminate\Http\Request;
 Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function() {
     // 获取指定二维码的交底文件
     Route::get('qrs/{qr}', 'QrsController@show')->name('qrs.show');
+    // 签名图片上传
+    Route::post('qm_upload', 'QrsController@qm_upload')->name('qrs.upload');
 });
