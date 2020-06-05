@@ -21,17 +21,18 @@ class UserController extends AdminController
             $grid->id->sortable();
             $grid->name;
             $grid->r_name;
-            $grid->avatar()->image();
+            // $grid->avatar()->image();
             $grid->weixin_openid;
             $grid->weixin_session_key;
             $grid->phone;
             $grid->created_at;
             $grid->updated_at->sortable();
 
-            // 禁用创建按钮
             $grid->disableCreateButton();
-            // 显示创建按钮
-            // $grid->showCreateButton();
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+            $grid->disableViewButton();
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');

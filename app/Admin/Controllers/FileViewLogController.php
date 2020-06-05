@@ -7,6 +7,7 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
+// use App\FileViewLog;
 
 class FileViewLogController extends AdminController
 {
@@ -17,15 +18,19 @@ class FileViewLogController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new FileViewLog(), function (Grid $grid) {
+        return Grid::make(new FileViewLog(['file', 'user']), function (Grid $grid) {
             $grid->id->sortable();
-            $grid->file_id;
-            $grid->user_id;
-            $grid->view_often;
-            $grid->view_time;
+            // $grid->file_id;
+            $grid->column('file.file_name');
+            // $grid->user_id;
+            $grid->column('user.name');
+            $grid->qm_img()->image();
             $grid->created_at;
             $grid->updated_at->sortable();
-
+            $grid->disableCreateButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+            $grid->disableViewButton();
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
 
