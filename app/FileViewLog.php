@@ -12,6 +12,10 @@ class FileViewLog extends Model
 
     protected $table = 'file_view_logs';
 
+    protected $fillable = [
+        'user_id', 'file_id', 'qm_img'
+    ];
+
     public function file()
     {
         return $this->belongsTo(File::class);

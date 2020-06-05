@@ -13,7 +13,8 @@
         "dcat/laravel-admin": "^1.4",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "overtrue/laravel-wechat": "~5.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
