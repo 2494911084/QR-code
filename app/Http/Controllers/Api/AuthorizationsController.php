@@ -34,37 +34,17 @@ class AuthorizationsController extends Controller
                 'weixin_openid' => $data['openid'],
                 'weixin_session_key' => $data['session_key']
             ]);
-            // 如果未提交用户名密码，403 错误提示
-            // if (!$request->username) {
-            //     throw new AuthenticationException('用户不存在');
-            // }
-
-            // $username = $request->username;
-
-            // 用户名可以是邮箱或电话
-            // filter_var($username, FILTER_VALIDATE_EMAIL) ?
-            //     $credentials['email'] = $username :
-            //     $credentials['phone'] = $username;
-
-            // $credentials['password'] = $request->password;
-
-            // // 验证用户名和密码是否正确
-            // if (!auth('api')->once($credentials)) {
-            //     throw new AuthenticationException('用户名或密码错误');
-            // }
-
-            // // 获取对应的用户
-            // $user = auth('api')->getUser();
-            // $attributes['weapp_openid'] = $data['openid'];
         }
-
-        // 更新用户数据
-        // $user->update($attributes);
-
         // 为对应用户创建 JWT
         $token = auth('api')->login($user);
 
-        return $this->respondWithToken($token)->setStatusCode(201);
+        return response()->json([
+            'access_token' => $token,
+            'openid' => $user->weixin_openid,
+            'weixin_session_key' => $user->weixin_session_key,
+            'token_type' => 'Bearer',
+            'expires_in' => auth('api')->factory()->getTTL() * 60
+        ])->setStatusCode(201);
     }
 
     public function update()

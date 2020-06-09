@@ -15,7 +15,6 @@ class FileViewLogRequest extends FormRequest
             'r_name' => 'required',
             'phone' => 'required',
             'file_img_url' => 'required',
-            'code' => 'required',
             'file_id' => 'required'
         ];
     }

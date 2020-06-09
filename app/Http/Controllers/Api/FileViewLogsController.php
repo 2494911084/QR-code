@@ -15,26 +15,27 @@ class FileViewLogsController extends Controller
     {
         // 根据 code 获取微信 openid 和 session_key
         try {
-            $miniProgram = \EasyWeChat::miniProgram();
-            $data = $miniProgram->auth->session($request->code);
-            // 找到 openid 对应的用户
-            $user = User::where('weixin_openid', $data['openid'])->first();
-            // 不存在就注册用户
-            if (!$user) {
-                $user = User::create([
-                    'weixin_openid' => $data['openid'],
-                    'weixin_session_key' => $data['session_key'],
-                    'name' => $request->r_name,
-                    'r_name' => $request->r_name,
-                    'phone' => $request->phone,
-                ]);
-            }
-            // 添加阅读记录
+            $user = auth('api')->getUser();
             FileViewLog::create([
                 'user_id' => $user->id,
                 'file_id' => $request->file_id,
                 'qm_img' => $request->file_img_url
             ]);
+
+            if (!$user->name) {
+                $attributes['name'] = $request->r_name;
+            }
+
+            if (!$user->r_name) {
+                $attributes['r_name'] = $request->r_name;
+            }
+
+            if (!$user->phone) {
+                $attributes['phone'] = $request->phone;
+            }
+            if (!$user->name && !$user->r_name && !$user->phone) {
+                $user->update($attributes);
+            }
 
             $result['status'] = 1;
         } catch (Exception $e) {
