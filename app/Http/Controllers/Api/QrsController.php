@@ -18,8 +18,10 @@ class QrsController extends Controller
         $file_array = [];
         foreach ($files_id as $key => $value) {
              $file = File::find($value);
-             $file['file'] = config('app.url') ."/uploads/" . $file['file'];
-             $file_array[] = $file;
+             if ($file) {
+                $file['file'] = config('app.url') ."/uploads/" . $file['file'];
+                $file_array[] = $file;
+             }
         }
         // $files_id_array = \Str::toArray($files_id);
         return $file_array;
