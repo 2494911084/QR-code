@@ -14,6 +14,7 @@ class AddWeixinOpenidKeyToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('name')->nullable()->change();
             $table->string('r_name')->nullable()->after('name');
             $table->string('avatar')->nullable()->after('r_name');
             $table->string('phone')->nullable()->unique()->after('avatar');
@@ -32,6 +33,7 @@ class AddWeixinOpenidKeyToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('name')->nullable('false')->change();
             $table->dropColumn('r_name');
             $table->dropColumn('avatar');
             $table->dropColumn('phone');

@@ -2,14 +2,13 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\FileViewLog;
+use App\Admin\Repositories\Subject;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
-// use App\FileViewLog;
 
-class FileViewLogController extends AdminController
+class SubjectController extends AdminController
 {
     /**
      * Make a grid builder.
@@ -18,23 +17,16 @@ class FileViewLogController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new FileViewLog(['file', 'user']), function (Grid $grid) {
-            $grid->export();
+        return Grid::make(new Subject(), function (Grid $grid) {
             $grid->id->sortable();
-            // $grid->file_id;
-            $grid->column('file.file_name');
-            // $grid->user_id;
-            $grid->column('user.name');
-            $grid->qm_img()->image();
+            $grid->title;
+            // $grid->optiona;
+            // $grid->optionb;
+            // $grid->optionc;
+            // $grid->optiond;
+            // $grid->optiont;
             $grid->created_at;
             $grid->updated_at->sortable();
-            $grid->disableCreateButton();
-            $grid->disableEditButton();
-            $grid->disableQuickEditButton();
-            $grid->disableViewButton();
-
-
-
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
@@ -52,12 +44,14 @@ class FileViewLogController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new FileViewLog(), function (Show $show) {
+        return Show::make($id, new Subject(), function (Show $show) {
             $show->id;
-            $show->file_id;
-            $show->user_id;
-            $show->view_often;
-            $show->view_time;
+            $show->title;
+            $show->optiona;
+            $show->optionb;
+            $show->optionc;
+            $show->optiond;
+            $show->optiont;
             $show->created_at;
             $show->updated_at;
         });
@@ -70,12 +64,14 @@ class FileViewLogController extends AdminController
      */
     protected function form()
     {
-        return Form::make(new FileViewLog(), function (Form $form) {
+        return Form::make(new Subject(), function (Form $form) {
             $form->display('id');
-            $form->text('file_id');
-            $form->text('user_id');
-            $form->text('view_often');
-            $form->text('view_time');
+            $form->text('title');
+            $form->text('optiona');
+            $form->text('optionb');
+            $form->text('optionc');
+            $form->text('optiond');
+            $form->text('optiont');
 
             $form->display('created_at');
             $form->display('updated_at');

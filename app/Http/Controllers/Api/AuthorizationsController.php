@@ -31,6 +31,8 @@ class AuthorizationsController extends Controller
         if (!$user) {
             // 如果查询不到这个用户,则添加一个用户
             $user = User::create([
+                'name' => '新用户',
+                'r_name' => '新用户',
                 'weixin_openid' => $data['openid'],
                 'weixin_session_key' => $data['session_key']
             ]);

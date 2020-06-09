@@ -4,7 +4,7 @@ return [
         'User' => '用户',
     ],
     'fields' => [
-        'name' => '名称',
+        'name' => '用户名',
         'r_name' => '姓名',
         'avatar' => '头像',
         'weixin_openid' => 'weixin_openid',

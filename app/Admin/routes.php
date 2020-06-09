@@ -17,4 +17,8 @@ Route::group([
     $router->resource('files', 'FileController');
     $router->resource('file_view_logs', 'FileViewLogController');
     $router->resource('qrs', 'QrController');
+    $router->resource('registers', 'RegisterController');
+    $router->resource('register_logs', 'RegisterLogController');
+    $router->resource('subjects', 'SubjectController');
+    $router->resource('subject_qrs', 'SubjectQrController');
 });

@@ -42,10 +42,19 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection view_count
      * @property Grid\Column|Collection file_id
      * @property Grid\Column|Collection user_id
+     * @property Grid\Column|Collection qm_img
      * @property Grid\Column|Collection view_often
      * @property Grid\Column|Collection view_time
+     * @property Grid\Column|Collection website
      * @property Grid\Column|Collection image
      * @property Grid\Column|Collection content
+     * @property Grid\Column|Collection register_id
+     * @property Grid\Column|Collection optiona
+     * @property Grid\Column|Collection optionb
+     * @property Grid\Column|Collection optionc
+     * @property Grid\Column|Collection optiond
+     * @property Grid\Column|Collection optiont
+     * @property Grid\Column|Collection subject_qr_name
      * @property Grid\Column|Collection parent_id
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection icon
@@ -97,10 +106,19 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection view_count(string $label = null)
      * @method Grid\Column|Collection file_id(string $label = null)
      * @method Grid\Column|Collection user_id(string $label = null)
+     * @method Grid\Column|Collection qm_img(string $label = null)
      * @method Grid\Column|Collection view_often(string $label = null)
      * @method Grid\Column|Collection view_time(string $label = null)
+     * @method Grid\Column|Collection website(string $label = null)
      * @method Grid\Column|Collection image(string $label = null)
      * @method Grid\Column|Collection content(string $label = null)
+     * @method Grid\Column|Collection register_id(string $label = null)
+     * @method Grid\Column|Collection optiona(string $label = null)
+     * @method Grid\Column|Collection optionb(string $label = null)
+     * @method Grid\Column|Collection optionc(string $label = null)
+     * @method Grid\Column|Collection optiond(string $label = null)
+     * @method Grid\Column|Collection optiont(string $label = null)
+     * @method Grid\Column|Collection subject_qr_name(string $label = null)
      * @method Grid\Column|Collection parent_id(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
@@ -157,10 +175,19 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection view_count
      * @property Show\Field|Collection file_id
      * @property Show\Field|Collection user_id
+     * @property Show\Field|Collection qm_img
      * @property Show\Field|Collection view_often
      * @property Show\Field|Collection view_time
+     * @property Show\Field|Collection website
      * @property Show\Field|Collection image
      * @property Show\Field|Collection content
+     * @property Show\Field|Collection register_id
+     * @property Show\Field|Collection optiona
+     * @property Show\Field|Collection optionb
+     * @property Show\Field|Collection optionc
+     * @property Show\Field|Collection optiond
+     * @property Show\Field|Collection optiont
+     * @property Show\Field|Collection subject_qr_name
      * @property Show\Field|Collection parent_id
      * @property Show\Field|Collection order
      * @property Show\Field|Collection icon
@@ -212,10 +239,19 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection view_count(string $label = null)
      * @method Show\Field|Collection file_id(string $label = null)
      * @method Show\Field|Collection user_id(string $label = null)
+     * @method Show\Field|Collection qm_img(string $label = null)
      * @method Show\Field|Collection view_often(string $label = null)
      * @method Show\Field|Collection view_time(string $label = null)
+     * @method Show\Field|Collection website(string $label = null)
      * @method Show\Field|Collection image(string $label = null)
      * @method Show\Field|Collection content(string $label = null)
+     * @method Show\Field|Collection register_id(string $label = null)
+     * @method Show\Field|Collection optiona(string $label = null)
+     * @method Show\Field|Collection optionb(string $label = null)
+     * @method Show\Field|Collection optionc(string $label = null)
+     * @method Show\Field|Collection optiond(string $label = null)
+     * @method Show\Field|Collection optiont(string $label = null)
+     * @method Show\Field|Collection subject_qr_name(string $label = null)
      * @method Show\Field|Collection parent_id(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)

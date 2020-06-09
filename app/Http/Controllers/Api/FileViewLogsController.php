@@ -22,11 +22,11 @@ class FileViewLogsController extends Controller
                 'qm_img' => $request->file_img_url
             ]);
 
-            if (!$user->name) {
+            if (!$user->name || $user->name == "新用户") {
                 $attributes['name'] = $request->r_name;
             }
 
-            if (!$user->r_name) {
+            if (!$user->r_name || $user->r_name == "新用户") {
                 $attributes['r_name'] = $request->r_name;
             }
 
